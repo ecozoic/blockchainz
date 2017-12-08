@@ -14,7 +14,10 @@ class Block {
       this.prevHash = '-1';
     }
 
-    this.hash = crypto.createHash('sha256').update(this.timestamp + this.data + this.index + this.prevHash).digest('hex');
+    this.hash = crypto
+      .createHash('sha256')
+      .update(this.timestamp + this.data + this.index + this.prevHash)
+      .digest('hex');
   }
 }
 

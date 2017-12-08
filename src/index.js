@@ -1,7 +1,8 @@
-const Block = require('./block');
+const Chain = require('./chain');
 
-const genesisBlock = new Block();
-const block = new Block('hey', genesisBlock);
+const chain = new Chain();
+chain.add('foo');
+chain.add('bar');
+chain.add('baz');
 
-console.log(genesisBlock);
-console.log(block);
+console.log(chain);
